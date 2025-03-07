@@ -20,7 +20,7 @@ app.user("/api", userRoutes);
 
 
 //Error handling middlewares
-app.use(errorHandling)
+app.use(errorHandling);
 
 
 // Testing Postgres connection
