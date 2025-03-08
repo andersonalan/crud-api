@@ -6,3 +6,6 @@ const errorHandling = (err, req, res, next) => {
     message: "Something went wrong",
     error: err.message,
   })
+}
+
+export default errorHandling

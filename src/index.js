@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(cors());
 
 // Routes
-app.user("/api", userRoutes);
+app.use("/api", userRoutes);
 
 
 //Error handling middlewares
@@ -35,4 +35,4 @@ app.listen(port, () => {
 });
 
 
-export default errorHandling;
+
