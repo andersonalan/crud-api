@@ -50,7 +50,7 @@ export const updateUser = async (req, res, next) => {
   const { name, email } = req.body;
   try {
     const updatedUser = await updateUserService(req.params.id, name, email);
-    if (!user) return handleResponse(res, 404, "User not found")
+    if (!updatedUser) return handleResponse(res, 404, "User not found")
     handleResponse(res, 200, "User updated successfully", users)
   } catch (err) {
     next(err);
@@ -60,7 +60,7 @@ export const updateUser = async (req, res, next) => {
 export const deleteUser = async (req, res, next) => {
   try {
     const deletedUser = await deleteUsersService(req.params.id);
-    if (!user) return handleResponse(res, 404, "User not found")
+    if (!deletedUser) return handleResponse(res, 404, "User not found")
     handleResponse(res, 200, "User deleted successfully", deletedUser)
   } catch (err) {
     next(err);
